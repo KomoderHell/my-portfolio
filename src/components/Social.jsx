@@ -3,7 +3,6 @@ import React, { useEffect, useState, useContext } from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { ThemeContext } from 'styled-components';
 import endpoints from '../constants/endpoints';
-import socialData from '../public/profile/skills.json';
 
 const styles = {
   iconStyle: {
@@ -15,7 +14,7 @@ const styles = {
 
 function Social() {
   const theme = useContext(ThemeContext);
-  const [data, setData] = useState(socialData.json());
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     fetch(endpoints.social, {
