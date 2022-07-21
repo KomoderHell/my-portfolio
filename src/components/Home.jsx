@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 import Fade from 'react-reveal';
+import homeData from '../public/profile/home.json';
 import endpoints from '../constants/endpoints';
 import Social from './Social';
 import FallbackSpinner from './FallbackSpinner';
@@ -22,7 +23,7 @@ const styles = {
 };
 
 function Home() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(homeData);
 
   useEffect(() => {
     fetch(endpoints.home, {
