@@ -15,7 +15,7 @@ const styles = {
 
 function Social() {
   const theme = useContext(ThemeContext);
-  const [data, setData] = useState(socialData);
+  const [data, setData] = useState(socialData.json());
 
   useEffect(() => {
     fetch(endpoints.social, {
